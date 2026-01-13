@@ -1,0 +1,62 @@
+# =========================
+# Ambiente virtual
+# =========================
+.venv/
+venv/
+env/
+
+# =========================
+# Cache e arquivos Python
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# =========================
+# Banco de dados e dados locais
+# =========================
+database.db
+*.sqlite
+*.sqlite3
+
+# Arquivos de debug / dados locais
+debug_data.py
+*.log
+
+# =========================
+# Variáveis de ambiente
+# =========================
+.env
+.env.*
+
+# =========================
+# IDEs e editores
+# =========================
+.vscode/
+.idea/
+*.swp
+
+# =========================
+# Sistema operacional
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Frontend (se usar Node)
+# =========================
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+
+# =========================
+# Testes e cobertura
+# =========================
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Dados grandes
+backend/app/data/games.csv
+backend/app/data/*.csv

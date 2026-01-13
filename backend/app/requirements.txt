@@ -1,0 +1,15 @@
+# --- Core Framework ---
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0  # Servidor ASGI para rodar o app
+
+# --- Banco de Dados & ORM ---
+sqlmodel>=0.0.16           # Wrapper do SQLAlchemy + Pydantic
+
+# --- Autenticação & Segurança ---
+passlib[bcrypt]            # Para criar hash de senhas (criptografia)
+python-jose[cryptography]  # Para gerar e validar tokens JWT
+python-multipart           # Necessário para formulários de login (OAuth2)
+
+# --- Utilitários ---
+email-validator            # Validação robusta de emails no Pydantic
+httpx                      # Cliente HTTP (caso precise testar APIs)
