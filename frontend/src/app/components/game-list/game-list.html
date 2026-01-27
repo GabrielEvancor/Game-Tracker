@@ -1,0 +1,34 @@
+<div class="container">
+  <h1>Catálogo de Jogos</h1>
+
+  <div class="game-grid" *ngIf="games.length > 0; else noGames">
+    
+    <div *ngFor="let game of games" class="game-card">   
+          
+      <div class="card-image">
+        <img [src]="game.image_url" [alt]="game.title" onerror="this.src='https://placehold.co/600x400?text=Sem+Imagem'">
+      </div>
+
+      <div class="card-content">
+        <h3 class="title">{{ game.title }}</h3>
+        
+        <div class="badges">
+            <span class="genre">{{ game.genres ? game.genres.split(',')[0] : 'Geral' }}</span>
+        </div>
+
+        <div class="footer">
+            <span class="price" *ngIf="game.price > 0">R$ {{ game.price }}</span>
+            <span class="price free" *ngIf="game.price <= 0">Grátis</span>
+            <button class="btn-details">Ver</button>
+        </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <ng-template #noGames>
+    <p>Nenhum jogo encontrado ou carregando...</p>
+  </ng-template>
+</div>
